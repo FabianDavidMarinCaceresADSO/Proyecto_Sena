@@ -1,0 +1,179 @@
+:root {
+
+  --bgrad--body--color: rgba(255, 195, 62, 255);
+  --bgrad--boton--color: #3f3719;
+  --bgrad--color--blanco:rgba(255, 255, 255, 255) ;
+  --bgrad--color--marron:#3d351e ;
+  --border--radius: 30px;
+  --border--solid: 4px;
+
+}
+
+body {
+  margin-top: 90px;
+  background-color: var(--bgrad--body--color);
+ display: flex;
+
+ margin-right: 90px;
+ 
+  
+
+}
+
+section {
+  border-radius: 30px;
+  background-color: var(--bgrad--color--blanco);
+  width: 550px;
+  height:630px;
+  
+  
+  
+ 
+
+}
+
+main {
+  display: flex ;
+  justify-content: center;
+  text-align: center;
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  padding: 30PX;
+  text-align: center;
+  justify-content: center;
+
+ 
+
+}
+
+
+
+button:active {
+  
+  background-color: #7c5834;
+}
+
+
+
+
+
+button{
+  background: none;
+  border-radius: 10px;
+  height: 38px;
+  width: 200px;
+  background-color: var(--bgrad--color--marron);
+  color: var(--bgrad--color--blanco);
+  
+}
+
+
+
+
+
+.registro__form--buttimg{
+  border: none;
+  background-color:white ;
+  width: auto;
+  height: auto;
+  padding: 0%;
+  margin: 0%;
+ 
+}
+
+.registro__form--buttimg:active{
+  transition: background-color 1s;
+  background-color: #dadada;
+}
+
+  
+
+img {
+  background-color: none;
+  width: 30px;
+
+  
+  
+}
+
+.registro__form--hola{
+  background-color: var();
+  display: flex;
+ justify-content: flex-start;
+  
+  
+
+
+  
+  
+}
+
+.registro__form--tilte {
+  
+  background-color: var();
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 150px;
+  margin-right: 40px;
+  
+  
+
+  
+}
+
+input {
+    
+   border: solid 0.5 ;
+    border-radius: 4px;
+    margin: 15px;
+    width: auto;
+    height: 35px;
+    margin-left: 50px;
+    max-width: 380px;
+    border-color: rgb(47, 44, 44);
+    
+    
+    
+    
+   
+
+}
+
+
+label {
+    color: rgb(0, 0, 0);
+  margin-left: 45px;
+  text-align: left;
+  font-family: ;
+  
+
+
+}
+
+header {
+  
+  padding-top: 20px;
+  width: 760px;
+  
+}
+
+.img-logo {
+  
+
+  width: 750px;
+  height: 583px;
+  
+
+  
+ 
+  
+  
+  
+  
+
+}
+

@@ -1,0 +1,24 @@
+:root {
+
+}
+
+body {
+
+    background-color: rgb(80, 118, 152);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+#inputSearch {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
