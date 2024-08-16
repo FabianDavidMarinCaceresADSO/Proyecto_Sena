@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Registrarse</title>
   <link rel="stylesheet" href="registro.css">
 </head>
 
@@ -15,7 +15,7 @@
   <main>
     <section class="registro">
 
-      <form class="registro__form" action="">
+      <form class="registroform__form" action="">
         
         <div class="registro__form registro__form--hola">
 
@@ -25,35 +25,38 @@
               <img src="/proyecto-panaderia-20240613T181230Z-001/proyecto-panaderia/imagenes/flecha.png" alt="">
             </a>
           </button>
-          <h2 class="registro__form  registro__form--tilte">Registrarse</h2>
+          <h2  id="btnRegistro" class="registro__form  registro__form--tilte">Registrarse</h2>
 
         </div>
        
        
 
         <label for="nombre" class="registro__form registro__form--label">Nombres Completo</label>
-        <input type="text" class="registro__form registro__form--input" placeholder="nombres">
+        <input type="text" id="nombre" class="registro__form registro__form--input" placeholder="nombres">
 
  
           <!--input.registro--form--->
 
         <label for="apellidos" class="registro__form resgistro__form--label">Apellidos Completos</label>
-        <input type="text" class="resgistor__form registro__form--input" placeholder="apellidos">
+        <input type="text" id="apellidos" class="resgistor__form registro__form--input" placeholder="apellidos">
 
-        <label for="contraseña" class="registro__form registro__form--label">Contraseña </label>
-        <input type="text" class="registro__form registro__form--input" placeholder="contraseña">
+        <label for="password" class="registro__form registro__form--label">Contraseña </label>
+        <input type="text" id="password" class="registro__form registro__form--input" placeholder="contraseña">
 
-        <label for="confirmarContraseña" class="registro--form registro__form--label">Correo electronico</label>
-        <input type="text" class="registro--form registor__from--label" placeholder="Correo">
+        <label for="email" class="registro--form registro__form--label">Correo electronico</label>
+        <input type="text" id="email" class="registro--form registor__from--label" placeholder="Correo">
+
+        <button class="registro__button">Registrarse</button>
 
       </form>
 
-      <button class="registro__button">Registrarse</button>
+
 
     </section>
 
   </main>
 
+  <script src="../scripts/registro.js" type="module"></script>
 </body>
 
 </html>
