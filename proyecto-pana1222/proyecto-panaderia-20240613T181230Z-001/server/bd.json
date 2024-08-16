@@ -1,0 +1,59 @@
+{
+  "usuarios": [
+    {
+      "id": "",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": "",
+      "rol": ""
+    },
+    {
+      "id": "",
+      "nombre": "dayana",
+      "apellido": "marin",
+      "password": "2222",
+      "correo": "dayan_23@gmail.com",
+      "rol": "empleado"
+    },
+    {
+      "id": "6833",
+      "nombre": "fabian",
+      "apellido": "marin",
+      "password": "12345",
+      "correo": "marinfabian31@gmail.com"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "empleado": "empleado"
+    },
+    {
+      "id": "2",
+      "name": "administrador"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "",
+      "nombre": "",
+      "apellido": "",
+      "telefono": "",
+      "email": "",
+      "Documento": ""
+    }
+  ],
+  "productos": [
+    {
+      "id": "",
+      "nombre": "",
+      "precio": "",
+      "stock": "",
+      "codigo": ""
+    }
+  ],
+  "pedido": [
+    {}
+  ]
+}
