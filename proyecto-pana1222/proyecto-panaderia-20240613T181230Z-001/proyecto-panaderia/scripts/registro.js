@@ -19,7 +19,7 @@ $botonRegistro.addEventListener("click",(event) => {
     Enviar(datos).then(() => {
         alert("Usuario registrado correctamente.");
     }).catch((error) => {
-        alert("Error al registrar el usuario.");
+        alert("Error al registrar el usuarioo.");
         console.error(error);
     });
 });
