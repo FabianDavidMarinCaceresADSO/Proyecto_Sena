@@ -1,10 +1,45 @@
 :root {
-
+    --bgrad--body--color: rgba(255, 195, 62, 255);
+    --bgrad--boton--color: #3f3719;
+    --bgrad--color--blanco:rgba(255, 255, 255, 255) ;
+    --bgrad--color--marron:#3d351e ;
+    --border--radius: 30px;
+    --border--solid: 4px;
+    --font--familiy--SUdtitulos: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body {
 
-    background-color: rgb(80, 118, 152);
+    background-color: var(--bgrad--color--blanco)
+}
+
+
+.encabezado {
+
+    background-color: var(--bgrad--body--color);
+    
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+
+img {
+    width: 200px;
+
+}
+
+
+.actionBotton {
+}
+
+button {
+  color: white;
+  height: 40px;
+  border-radius: var(--border--radius);
+ background-color: #3f3719;
+
 }
 
 .search {
@@ -22,3 +57,5 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
 }
+
+

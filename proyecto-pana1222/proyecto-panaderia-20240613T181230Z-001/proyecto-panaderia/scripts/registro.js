@@ -1,5 +1,6 @@
 import {Enviar} from "../modulos/crud.js";
 
+
 const $form = document.querySelector(".registroform__form")
 const $botonRegistro = document.querySelector(".registro__button");
 
