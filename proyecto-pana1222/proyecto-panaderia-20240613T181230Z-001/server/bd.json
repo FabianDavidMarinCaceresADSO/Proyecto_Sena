@@ -1,22 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": "",
-      "rol": ""
-    },
-    {
-      "id": "",
-      "nombre": "dayana",
-      "apellido": "marin",
-      "password": "2222",
-      "correo": "dayan_23@gmail.com",
-      "rol": "empleado"
-    },
-    {
       "id": "6833",
       "nombre": "fabian",
       "apellido": "marin",
@@ -38,88 +22,32 @@
       "correo": "ana35002@gmail.com"
     },
     {
-      "id": "84eb",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
+      "id": "d302",
+      "nombre": "Samuel",
+      "apellido": "Rueda",
+      "password": "123",
+      "correo": "samuel@gmail.com"
     },
     {
-      "id": "5ae3",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
+      "id": "554a",
+      "nombre": "Pepito",
+      "apellido": "Perez",
+      "password": "12345",
+      "correo": "perez@gmail.com"
     },
     {
-      "id": "f20e",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
+      "id": "eec3",
+      "nombre": "Daniel",
+      "apellido": "Puello",
+      "password": "123456",
+      "correo": "qweqrqwe"
     },
     {
-      "id": "6294",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "00de",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "ff64",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "bcc2",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "aac2",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "040a",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "f995",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "2643",
-      "nombre": "ll",
-      "apellido": "",
-      "password": "",
-      "correo": ""
-    },
-    {
-      "id": "a46b",
-      "nombre": "",
-      "apellido": "",
-      "password": "",
-      "correo": ""
+      "id": "44a8",
+      "nombre": "Samuel",
+      "apellido": "Perez",
+      "password": "123",
+      "correo": "123qwerqwe@gmail.com"
     }
   ],
   "roles": [
@@ -134,36 +62,12 @@
   ],
   "clientes": [
     {
-      "id": "ee3d",
-      "Documento": "1098071504",
-      "nombre": "Fabian David",
-      "apellido": "Marin Caceres",
-      "telefono": "3185788432",
-      "email": "marinfabian31@gmail.com"
-    },
-    {
-      "id": "8ec0",
-      "Documento": "12345678",
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "telefono": "34600123456",
-      "email": " juan.perez@example.com"
-    },
-    {
-      "id": "5c00",
-      "Documento": " 23456789",
-      "nombre": "María",
-      "apellido": "García",
-      "telefono": "34 600 234 567",
-      "email": "maria.garcia@example.com"
-    },
-    {
-      "id": "f3c6",
       "Documento": "56789012",
       "nombre": "Sánchez",
-      "apellido": "Sánchez",
-      "telefono": "340567 890",
-      "email": " pedro.sanchez@example.com"
+      "apellido": "garcia",
+      "telefono": "340567890",
+      "email": "pedro.sanchez@example.com",
+      "id": "f3c6"
     },
     {
       "id": "0c50",
@@ -181,11 +85,31 @@
       "precio": "",
       "stock": "",
       "codigo": ""
-    }
+    },
+      
+     {
+      "id": "1",
+      "nombre": "empanada pollo",
+      "precio": "2500",
+      "stock": "12"
+     }
+
   ],
   "pedido": [
     {
       "id": "1832"
+    }
+  ],
+  "provedores": [
+    {
+      "RUT": "",
+      "nombre": "",
+      "dirrecion": "",
+      "correo": "",
+      "telefono": "",
+      "producto": "",
+
+
     }
   ]
 }

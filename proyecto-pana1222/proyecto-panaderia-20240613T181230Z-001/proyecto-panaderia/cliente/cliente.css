@@ -39,6 +39,7 @@ img {
     width: 540px;
    justify-content: end;
     gap: 20px;
+   
 }
 
 button {
@@ -47,6 +48,7 @@ button {
   border-radius: var(--border--radius);
  background-color: #3f3719;
  font-family: var(--font--familiy--SUdtitulos);
+ 
 
 }
 
@@ -143,4 +145,16 @@ th {
 th, td {
     text-align: center;
     border: 1px solid var(--bgrad--boton--color);
+}
+
+
+.button__provedores {
+    text-decoration: none;
+    color: var(--bgrad--color--blanco);
+
+}
+
+.button__productos {
+    text-decoration: none;
+    font-family: var(--font--familiy--SUdtitulos);  
 }

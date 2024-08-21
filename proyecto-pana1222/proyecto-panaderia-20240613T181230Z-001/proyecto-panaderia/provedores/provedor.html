@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Provedores</title>
     <link rel="stylesheet" href="producto.css">
 </head>
 
@@ -12,17 +12,18 @@
     
     <header class="encabezado">   
         <img class="encabezado__img" src="../imagenes/logo.png" alt="">
-        <h1 class="encabezado__title">Productos</h1>
+        <h1 class="encabezado__title">Provedores</h1>
         
 
         <div class="actionBotton"> 
-            <a href=""> <button class="">Provedores</button></a>       
+            <a href="../productos/producto.html"> <button class="">Productos</button></a>       
           <a href="../cliente/cliente.html"> <button class="button__productos">clientes</button> </a> 
           <a href="../pedidos/pedidos.html"> <button class="button__pedidios">pedidos</button> </a> 
            <a href="../usuarios/usuarios.html"> <button class="button__usuarios">usuarios</button> </a>
         </div>
 
         <div class="search">
+            
              <input id="inputSearch" type="search" autocomplete="off" placeholder="Buscar"> 
              <button class="search__Button">Buscar</button>
             </div>
@@ -33,17 +34,23 @@
                     
             <form action="" class="datos__form" id="form" novalidate>
                 <div class="form__Clientes">
-                     <label for="codigo" class="user__label"><b>CODIGO:</b></label>
-                    <input type="text" id="codigo" name="clientCod" class="user__input" autocomplete="off" required>
+                     <label for="rut" class="user__label"><b>RUT:</b></label>
+                    <input type="text" id="rut" name="clientCod" class="user__input" autocomplete="off" required>
                         
-                          <label for="nombre" class="user__label"><b>PRODUCTO:</b></label>
+                          <label for="nombre" class="user__label"><b>:NOMBRE</b></label>
                             <input type="text" id="nombre" name="clientNom" class="user__input" autocomplete="off" required>
                     
-                        <label for="precio" class="user__label"><b>PRECIO:</b></label>
-                        <input type="text" id="precio" name="clientLast" class="user__input" autocomplete="off" required>
+                        <label for="telefono" class="user__label"><b>TELEFONO:</b></label>
+                        <input type="text" id="telefono" name="clientLast" class="user__input" autocomplete="off" required>
+
+                    
+                        <label for="producto" class="user__label"><b>PRODUCTO:</b></label>
+                        <input type="text" id="producto" name="clientNum" class="user__input" autocomplete="off" required>
 
                     <label for="stock" class="user__label"><b>STOCK:</b></label>
                     <input type="text" id="stock" name="clientNum" class="user__input" autocomplete="off" required>
+
+
                 
                 <div class="form__hide"></div>
                 <div class="form__buttons">
@@ -60,10 +67,10 @@
             <table class="table__clientes">
                 <thead>
                   <tr class="table__body">
-                    <th class="table__body th">ID</th>
-                    <th class="table__body th">CODIGO</th>
+                    <th class="table__body th">RUT</th>
+                    <th class="table__body th">NOMBRE</th>
+                    <th class="table__body th">TELEFONO</th>
                     <th class="table__body th">PRODUCTO</th>
-                    <th class="table__body th">PRECIO</th>
                     <th class="table__body th">STOCK</th>
                     <th class="table__body th">MOD.</th>
                   </tr>
@@ -74,6 +81,6 @@
         </section>
 
     </main>
-    <script src="../scripts/productos.js" type="module"></script>
+    <script src="../scripts/provedores.js" type="module"></script>
 </body>
 </html>

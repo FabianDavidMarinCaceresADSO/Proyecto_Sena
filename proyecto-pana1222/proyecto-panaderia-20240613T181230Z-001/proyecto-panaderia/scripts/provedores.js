@@ -5,11 +5,11 @@ import is_numbers from "../modulos/nuemeros.js";
 
 const $form = document.querySelector(".datos__form");
 const $botonNuevo_cliente = document.querySelector("#nuevo");
-const $documento = document.querySelector("#documento");
+const $rut = document.querySelector("#rut");
 const $nombre = document.querySelector("#nombre");
-const $apellido = document.querySelector("#apellido");
 const $telefono = document.querySelector("#telefono");
-const $email = document.querySelector("#email");
+const $producto = document.querySelector("#producto");
+const $stock = document.querySelector("#stock");
 
 
 let clienteId = null;
@@ -18,31 +18,31 @@ $botonNuevo_cliente.addEventListener("click",(event) => {
     event.preventDefault();
 
     const datos = {
-        Documento: $documento.value,
+        rut: $rut.value,
         nombre: $nombre.value,
-        apellido: $apellido.value,
         telefono: $telefono.value,
-        email: $email.value
+        producto: $producto.value,
+        stock: $stock.value
     };
 
 
     if (clienteId === null) {
         // Si clienteId es null, significa que se está añadiendo un nuevo cliente
-        Enviar(datos, `clientes`).then(() => {
-            alert("Cliente registrado Exitosamente.");
+        Enviar(datos, `provedores`).then(() => {
+            alert("Provedor registrado Exitosamente.");
             list(); // Recargar la lista después de añadir
         }).catch((error) => {
-            alert("Error al Registrar el cliente.");
+            alert("Error al Registrar el provedor.");
             console.error(error);
         });
     } else {
         // Si clienteId no es null, significa que se está modificando un cliente existente
-        modificar(clienteId, datos, `clientes`).then(() => {
-            alert("Cliente modificado correctamente.");
+        modificar(clienteId, datos, `provedores`).then(() => {
+            alert("Provedor modificado correctamente.");
             clienteId = null; // Resetear clienteId después de modificar
             list(); // Recargar la lista después de modificar
         }).catch((error) => {
-            alert("Error al modificar el cliente.");
+            alert("Error al modificar el Provedor.");
             console.error(error);
         });
     }
@@ -52,7 +52,7 @@ $botonNuevo_cliente.addEventListener("click",(event) => {
 // Llama a la función listar para obtener los datos
 const list = async () => {
     try{
-        const data = await listar(`clientes`);  // Llama a la API para obtener los datos de clientes
+        const data = await listar(`provedores`);  // Llama a la API para obtener los datos de clientes
         renderData(data); // Llama a la función para renderizar los datos en el DOM
     } catch (error) {
         console.error("Error a listar datos:", error);
@@ -97,13 +97,13 @@ const renderData = (data) => {
 
         // Event listener para el botón de eliminar
         drop.addEventListener("click", async () => {
-            if (confirm("¿Estás seguro de que deseas eliminar este cliente?")) {
+            if (confirm("¿Estás seguro de que deseas eliminar este provedor?")) {
                 try {
-                    await eliminar(item.id, 'clientes');
+                    await eliminar(item.id, 'provedores');
                     alert("Cliente eliminado correctamente.");
                     list(); // Recargar la lista después de eliminar
                 } catch (error) {
-                    alert("Error al eliminar el cliente.");
+                    alert("Error al eliminar el provedor.");
                     console.error(error);
                 }
             }
@@ -151,16 +151,3 @@ $telefono.addEventListener("keypress", (event) => {
 $nombre.addEventListener("keypress", (event)=>{
     is_letters(event);
 })  
-
-$apellido.addEventListener("keypress", (event) => {
-    is_letters(event);
-} )
-
-$documento.addEventListener("keypress", (event) => {
-    is_numbers(event);
-} )
-
-
-
-    
-
