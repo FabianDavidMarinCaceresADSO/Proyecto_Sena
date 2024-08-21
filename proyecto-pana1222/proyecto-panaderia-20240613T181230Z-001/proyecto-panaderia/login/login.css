@@ -6,6 +6,8 @@
   --bgrad--color--marron:#3d351e ;
   --border--radius: 30px;
   --border--solid: 4px;
+  --font--familiy--SUdtitulos: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 
 
 
@@ -16,6 +18,8 @@ body {
   flex-direction: column;
   gap: 8px;
   background-color: var(--bgrad--body--color);
+  
+
 
 }
 
@@ -61,7 +65,7 @@ main {
 section {
   
   border-radius: 30px;
-  width: 650px;
+  width: 550px;
   height:480px;
  
   display: flex;
@@ -81,12 +85,16 @@ input  {
   margin: 15px;
   width: 240px;
   height: 35px;
-  
   max-width: 380px;
   border-color: rgb(47, 44, 44);
   
   
 
+}
+
+label {
+  
+  font-family: var(--font--familiy--SUdtitulos) ;
 }
 
 header {
@@ -99,6 +107,19 @@ img {
   
   width: 40%;
   height: 30%;
+
+}
+
+.botones__Ingresar {
+  background-color: var(--bgrad--boton--color);
+  border-radius: 12px;
+  height: 38px;
+  width: 230px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+
+
 
 }
 

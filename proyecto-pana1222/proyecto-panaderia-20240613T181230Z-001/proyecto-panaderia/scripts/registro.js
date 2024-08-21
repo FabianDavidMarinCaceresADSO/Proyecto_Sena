@@ -1,3 +1,4 @@
+
 import {Enviar} from "../modulos/crud.js";
 
 
@@ -17,12 +18,15 @@ $botonRegistro.addEventListener("click",(event) => {
     
 
       // Llamar a la función para enviar los datos
-    Enviar(datos).then(() => {
+    Enviar(datos, `usuarios`).then(() => {
         alert("Usuario registrado correctamente.");
     }).catch((error) => {
-        alert("Error al registrar el usuarioo.");
+        alert("Error al registrar el usuario.");
         console.error(error);
     });
 });
+
+
+
 
 

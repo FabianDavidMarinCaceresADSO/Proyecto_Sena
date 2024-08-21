@@ -22,6 +22,104 @@
       "apellido": "marin",
       "password": "12345",
       "correo": "marinfabian31@gmail.com"
+    },
+    {
+      "id": "9299",
+      "nombre": "david",
+      "apellido": "caceres",
+      "password": "1234",
+      "correo": "david45003@gmail.com"
+    },
+    {
+      "id": "a477",
+      "nombre": "Ana",
+      "apellido": "Lucia",
+      "password": "12345",
+      "correo": "ana35002@gmail.com"
+    },
+    {
+      "id": "84eb",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "5ae3",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "f20e",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "6294",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "00de",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "ff64",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "bcc2",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "aac2",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "040a",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "f995",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "2643",
+      "nombre": "ll",
+      "apellido": "",
+      "password": "",
+      "correo": ""
+    },
+    {
+      "id": "a46b",
+      "nombre": "",
+      "apellido": "",
+      "password": "",
+      "correo": ""
     }
   ],
   "roles": [
@@ -36,12 +134,44 @@
   ],
   "clientes": [
     {
-      "id": "",
-      "nombre": "",
-      "apellido": "",
-      "telefono": "",
-      "email": "",
-      "Documento": ""
+      "id": "ee3d",
+      "Documento": "1098071504",
+      "nombre": "Fabian David",
+      "apellido": "Marin Caceres",
+      "telefono": "3185788432",
+      "email": "marinfabian31@gmail.com"
+    },
+    {
+      "id": "8ec0",
+      "Documento": "12345678",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "telefono": "34600123456",
+      "email": " juan.perez@example.com"
+    },
+    {
+      "id": "5c00",
+      "Documento": " 23456789",
+      "nombre": "María",
+      "apellido": "García",
+      "telefono": "34 600 234 567",
+      "email": "maria.garcia@example.com"
+    },
+    {
+      "id": "f3c6",
+      "Documento": "56789012",
+      "nombre": "Sánchez",
+      "apellido": "Sánchez",
+      "telefono": "340567 890",
+      "email": " pedro.sanchez@example.com"
+    },
+    {
+      "id": "0c50",
+      "Documento": "78901234",
+      "nombre": "Carlos",
+      "apellido": " López",
+      "telefono": "3156789012",
+      "email": " carlos.lopez@example.com"
     }
   ],
   "productos": [
@@ -54,6 +184,8 @@
     }
   ],
   "pedido": [
-    {}
+    {
+      "id": "1832"
+    }
   ]
 }

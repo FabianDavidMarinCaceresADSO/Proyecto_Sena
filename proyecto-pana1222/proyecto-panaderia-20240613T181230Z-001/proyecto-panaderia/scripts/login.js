@@ -1,41 +1,29 @@
-import {listar} from "../modulos/crud.js";
+import {login} from "../modulos/crud.js";
 
-const $form = document.querySelector(".form__login")
-const $botonIngresar = document.querySelector(".botones__ingresar");
-const $nombre = document.querySelector('#namr').value;
-const $password = document.querySelector('#password').value;
-
+const $form = document.querySelector(".login__form")
+const $botonIngresar = document.querySelector(".botones__Ingresar");
 
 
 
 $botonIngresar.addEventListener("click", (event) => {
-    event.preventDefault();
+  event.preventDefault(); 
 
-    try {
-        const response = await fetch('http://localhost:3000/usuarios',   
-     {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json; charset=UTF-8',
-          },
-          body: JSON.stringify({ email, password })
-        });
-    
-        if (response.ok) {
-          const   
-     data = await response.json();
-          localStorage.setItem('token', data.token);   
-    
-          // Redirigir a la página principal o mostrar el contenido protegido
-        } else {
-          alert('Credenciales incorrectas');
-        }
-      } catch (error) {
-        console.error(error);
-        alert('Error al iniciar sesión');
+  const datos = {
+      correo: document.querySelector("#email").value,
+      password: document.querySelector("#password").value,  
+  };
+
+  // Llamar a la función Login para validar los datos
+  login(datos).then((usuario) => {
+      if (usuario) {  // Si la función Login devuelve un usuario (login exitoso)
+          alert("Inicio de sesión exitoso");
+          window.location.href = "../cliente/cliente.html";  // Redirige al usuario a la página de clientes
+      } else {
+          alert("Correo o contraseña incorrectos"); 
       }
-    });
+  }).catch((error) => {
+      alert("Error al iniciar sesión");  
+      console.error(error);  
+  });
+});
 
-
-
-}  

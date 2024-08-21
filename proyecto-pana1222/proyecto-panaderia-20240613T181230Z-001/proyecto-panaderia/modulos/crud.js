@@ -1,10 +1,12 @@
-     
+import {URL,URL_usuarios} from "../confing/confing.js";
+
+
 
 
 // ENVIAR DATOS 
-export const Enviar = async (data) => {
+export const Enviar = async (data, dirrecion) => {
     try {
-        const response = await fetch('http://localhost:3000/usuarios', {
+        const response = await fetch(`${URL}${dirrecion}`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -24,4 +26,83 @@ export const Enviar = async (data) => {
 } catch (error) {
     console.error("Error en la solicitud:", error);
 }
+};
+
+
+//
+
+export const login = async (data) => {
+    const response = await fetch(`${URL}usuarios?correo=${data.correo}&password=${data.password}`);
+    const usuarios = await response.json();
+
+    // Si el array no está vacío, el usuario existe
+    if (usuarios.length > 0) {
+        return usuarios[0];  // Retorna los datos del usuario
+    } else {
+        return null;  // No se encontró el usuario
+    }
+};
+
+
+export const listar = async (dirrecion) => {
+    try {
+        const response = await fetch(`${URL}${dirrecion}`);
+        const data = await response.json();
+
+        // Verificar si la solicitud fue exitosa
+        if (response.ok) {
+            return data;
+        } else {
+            console.error("Error al listar los datos:", data);
+            return [];
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+        return [];
+    }
+};
+
+export const eliminar = async (id, dirrecion) => {
+    try {
+        const response = await fetch(`${URL}${dirrecion}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            }
+        });
+
+        // Verificar si la solicitud fue exitosa
+        if (response.ok) {
+            console.log("Elemento eliminado correctamente.");
+        } else {
+            console.error("Error al eliminar el elemento.");
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+    }
+
+};
+
+export const modificar = async (id, datos, dirrecion) => {
+    try {
+        const response = await fetch(`${URL}${dirrecion}/${id}`, {
+            method: 'PUT', // Usualmente 'PUT' para actualizar
+            body: JSON.stringify(datos),
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            }
+        });
+
+        // Convertir la respuesta en JSON
+        const result = await response.json();
+
+        // Verificar si la solicitud fue exitosa
+        if (response.ok) {
+            console.log("Elemento modificado correctamente:", result);
+        } else {
+            console.error("Error al modificar el elemento:", result);
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+    }
 };
