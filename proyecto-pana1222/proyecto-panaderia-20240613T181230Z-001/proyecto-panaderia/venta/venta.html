@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta</title>
+    <link rel="stylesheet" href="venta.css">
+</head>
+
+
+<body>
+    
+    <header class="encabezado">   
+        <img class="encabezado__img" src="../imagenes/logo.png" alt="">
+        <h1 class="encabezado__title">Venta Nueva</h1>
+        
+
+        <div class="actionBotton"> 
+            <a href=""> <button class="">Provedores</button></a>       
+          <a href="../cliente/cliente.html"> <button class="button__productos">clientes</button> </a> 
+          <a href="../pedidos/pedidos.html"> <button class="button__pedidios">pedidos</button> </a> 
+           <a href="../usuarios/usuarios.html"> <button class="button__usuarios">usuarios</button> </a>
+        </div>
+
+        <div class="search">
+             <input id="inputSearch" type="search" autocomplete="off" placeholder="Buscar"> 
+             <button class="search__Button">Buscar</button>
+            </div>
+        
+    </header>
+    <main>
+        <section class="datos">
+                    
+            <form action="" class="datos__form" id="form" novalidate>
+                <div class="form__Clientes">
+                    <label for="DOCUMENTO" class="user__label"><b>DOCUMENTO CLIENTE:</b></label>
+                    <select name="clientCod" id="DOCUMENTO" class="user__input">
+                        <option value="pre" disabled>Seleccione un cliente...</option>
+                    </select>
+                    
+                    <input type="hidden" id="cod">
+
+                    <label for="PRODUCTO" class="user__label"><b>PRODUCTO:</b></label>
+                    <input type="text" id="PRODUCTO" name="clientNom" class="user__input" autocomplete="off" required disabled>
+                
+                    <label for="precio" class="user__label"><b>PRECIO:</b></label>
+                    <input type="text" id="precio" name="clientLast" class="user__input" autocomplete="off" required disabled>
+
+                    <label for="stock" class="user__label"><b>CANTIDAD:</b></label>
+                    <input type="text" id="stock" name="clientNum" class="user__input" autocomplete="off" required >
+
+                    <label for="stockDisponible" class="user__label"><b>STOCK DISPONIBLE:</b></label>
+                    <input type="text" id="stockDisponible" name="clientNum" class="user__input" autocomplete="off" required disabled>
+
+                
+                <div class="form__hide"></div>
+                <div class="form__buttons">
+                    <button type="submit" id="nuevo" class="nuevo__cliente"><b>AÑADIR</b></button>
+                    <button type="button" id="clean" class="boton clean"><b>LIMPIAR</b></button>
+
+                </div>
+            </div>
+        </form>
+        </section>
+        <section>
+            <form action="" id="form2">            
+                <label for="">Buscar:</label>
+                <input type="search" placeholder="Buscar por id..." id="search">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="table">
+
+            <table class="table__PEDIDO">
+                <thead>
+                  <tr class="table__body">
+                    <th class="table__body th">CODIGO</th>
+                    <th class="table__body th">PRODUCTO</th>
+                    <th class="table__body th">CANTIDAD</th>
+                    <th class="table__body th">PRECIO</th>
+                    <th class="table__body th">PRECIO TOTAL</th>
+                    <th class="table__body th">MOD.</th>
+                  </tr>
+                </thead>
+                <tbody class="table__table table__table--body" id="tbody__productos">          
+                
+                </tbody>
+              </table>
+
+        
+              <div class="pago">
+
+                <label for="PagoTotal" class="user__label"><b>Pago total:</b></label>
+                    <input type="pagoTotal" id="pagoTotal" name="clientNom" class="user__input" autocomplete="off" required disabled>
+
+                    <label for="Recibido" class="user__label"><b>Recibido:</b></label>
+                    <input type="text" id="Recibido" name="clientNom" class="user__input" autocomplete="off" > 
+
+                    <label for="vueltos" class="user__label"><b>Vueltos:</b></label>
+                    <input type="vueltos" id="vueltos" name="clientNom" class="user__input" autocomplete="off" required disabled> 
+
+                    <button type="submit" class="pagar"><b>PAGAR</b> </button>
+
+              </div>
+              
+
+              
+
+         
+                
+          
+
+
+        </section>
+
+
+
+    </main>
+    <script src="../scripts/ventas.js" type="module"></script>
+</body>
+</html>

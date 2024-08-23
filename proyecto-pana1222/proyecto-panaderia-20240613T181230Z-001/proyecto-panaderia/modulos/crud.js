@@ -45,21 +45,9 @@ export const login = async (data) => {
 
 
 export const listar = async (dirrecion) => {
-    try {
         const response = await fetch(`${URL}${dirrecion}`);
         const data = await response.json();
-
-        // Verificar si la solicitud fue exitosa
-        if (response.ok) {
-            return data;
-        } else {
-            console.error("Error al listar los datos:", data);
-            return [];
-        }
-    } catch (error) {
-        console.error("Error en la solicitud:", error);
-        return [];
-    }
+        return data;
 };
 
 export const eliminar = async (id, dirrecion) => {
@@ -87,6 +75,36 @@ export const modificar = async (id, datos, dirrecion) => {
     try {
         const response = await fetch(`${URL}${dirrecion}/${id}`, {
             method: 'PUT', // Usualmente 'PUT' para actualizar
+            body: JSON.stringify(datos),
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            }
+        });
+
+        // Convertir la respuesta en JSON
+        const result = await response.json();
+
+        // Verificar si la solicitud fue exitosa
+        if (response.ok) {
+            console.log("Elemento modificado correctamente:", result);
+        } else {
+            console.error("Error al modificar el elemento:", result);
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+    }
+};
+
+export const buscar = async(id, enpoint)=>{
+    const data = await fetch(`${URL}${enpoint}/${id}`);
+    const repus = await data.json();
+    return repus;
+}
+
+export const patch = async (id, datos, dirrecion) => {
+    try {
+        const response = await fetch(`${URL}${dirrecion}/${id}`, {
+            method: 'PATCH', // Usualmente 'PATCH' para actualizar
             body: JSON.stringify(datos),
             headers: {
                 'Content-Type': 'application/json; charset=UTF-8'

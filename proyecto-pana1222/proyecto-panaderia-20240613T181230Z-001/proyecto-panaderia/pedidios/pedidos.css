@@ -1,0 +1,146 @@
+:root {
+    --bgrad--body--color: rgba(255, 195, 62, 255);
+    --bgrad--boton--color: #3f3719;
+    --bgrad--color--blanco:rgba(255, 255, 255, 255) ;
+    --bgrad--color--marron:#3d351e ;
+    --border--radius: 8px;
+    --border--solid: 4px;
+    --font--familiy--SUdtitulos: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--bgrad--color--blanco)
+}
+
+
+.encabezado {
+
+    background-color: var(--bgrad--body--color);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+img {
+    width: 250px;
+
+}
+
+
+.actionBotton {
+    display: flex;
+    width: 540px;
+   justify-content: end;
+    gap: 20px;
+}
+
+button {
+  color: white;
+  padding: 12px;
+  border-radius: var(--border--radius);
+ background-color: #3f3719;
+ font-family: var(--font--familiy--SUdtitulos);
+
+}
+
+.form__buttons {
+ margin-top: 2%;
+ text-align: center;
+}
+
+.search__Button {
+    
+    border-radius: 3px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    gap: 10px;
+    margin: 0 auto;
+    
+    
+}
+
+#inputSearch {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+
+section{
+    
+    margin-top: 3%;
+   
+  
+
+    
+ 
+}
+
+
+.datos__form {
+     /* Espacio entre los campos */
+    
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    background-color: var(--form-background-color); /* Color de fondo */
+}
+
+.user__label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--label-color);
+    margin-bottom: 5px;
+}
+
+
+input {
+    border-bottom: 5px solid var(--bgrad--body--color); /* Borde de 5px solo en la parte inferior */
+  border-top: none;    /* Sin borde superior */
+  border-left: none;   /* Sin borde izquierdo */
+  border-right: none;
+}
+
+.user__input:focus {
+    border-color: var(--input-focus-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    
+    
+    
+}
+
+th {
+    background-color: var(--bgrad--body--color);
+    font-family: var(--font--familiy--SUdtitulos);
+    color: var(--bgrad--color--blanco);
+    height: 40px;
+    
+    
+    
+
+}
+
+.boton + .boton {
+    margin-left: 10px; /* Añade espacio entre botones adyacentes */
+}
+
+th, td {
+    text-align: center;
+    border: 1px solid var(--bgrad--boton--color);
+}

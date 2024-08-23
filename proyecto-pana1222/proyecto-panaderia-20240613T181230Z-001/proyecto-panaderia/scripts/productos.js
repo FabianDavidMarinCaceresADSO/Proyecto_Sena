@@ -2,39 +2,54 @@
 
 const $form = document.querySelector(".datos__form");
 const $botonNuevo_producto = document.querySelector("#nuevo");
-let productoID = null;
+const $cod = document.querySelector("#codigo");
+const $name = document.querySelector("#nombre");
+const $preci = document.querySelector("#precio");
+const $stock = document.querySelector("#stock");
+const $modi = document.querySelector("#modi");
+const $clean = document.querySelector("#clean");
+
+function limpiar(){
+    $cod.value = ""
+    $name.value = ""
+    $preci.value = ""
+    $stock.value = ""
+}
 
 $botonNuevo_producto.addEventListener("click",(event) => { 
     event.preventDefault();
+    let existe = false;
+    if($cod.value != "" && $name.value != "" && $preci.value != "" && $stock.value != ""){
+        listar(`productos`)
+            .then((x)=>{
+                x.forEach(e => {
+                    if(e.id == $cod.value){
+                        existe = true;
+                    }
+                });
+                if(existe){
+                    alert("El codigo ya esta en uso")
+                }
+                else{
+                    const datos = {
+                        id: $cod.value,
+                        nombre: $name.value,
+                        precio: $preci.value,
+                        stock: $stock.value
+                    };
+                    Enviar(datos, `productos`)
+                    alert("Producto registrado")
+                    limpiar();
+                    list();
+                }
+            })
 
-    const datos = {
-        codigo: document.querySelector("#codigo").value,
-        nombre:document.querySelector("#nombre").value,
-        precio: document.querySelector("#precio").value,
-        stock: document.querySelector("#stock").value
-    };
-
-
-    if (productoID === null) {
-        // Si clienteId es null, significa que se está añadiendo un nuevo cliente
-        Enviar(datos, `productos`).then(() => {
-            alert("Producto registrado Exitosamente.");
-            list(); // Recargar la lista después de añadir
-        }).catch((error) => {
-            alert("Error al Registrar el producto.");
-            console.error(error);
-        });
-    } else {
-        // Si clienteId no es null, significa que se está modificando un cliente existente
-        modificar(productoID, datos, `productos`).then(() => {
-            alert("producto modificado correctamente.");
-            productoID = null; // Resetear clienteId después de modificar
-            list(); // Recargar la lista después de modificar
-        }).catch((error) => {
-            alert("Error al modificar los producto.");
-            console.error(error);
-        });
+    }else{
+        alert("Rellene todos los campos")
     }
+
+
+
 });
 
 
@@ -56,10 +71,8 @@ const renderData = (data) => {
     $tableBody.innerHTML = "";    
 
     data.forEach(item => {
-        console.log(item);
 
         const tr = document.createElement("tr"); // Crea una fila para la tabla
-        const id = document.createElement("td");
         const codigo = document.createElement("td");
         const nombre = document.createElement("td");
         const precio = document.createElement("td");
@@ -69,8 +82,7 @@ const renderData = (data) => {
         const modi = document.createElement("button");
 
         // Asigna los valores a las celdas
-        id.textContent = item.id;
-        codigo.textContent = item.codigo;
+        codigo.textContent = item.id;
         nombre.textContent = item.nombre;
         precio.textContent = item.precio;
         stock.textContent = item.stock;
@@ -98,18 +110,16 @@ const renderData = (data) => {
 
         modi.addEventListener("click", () => {
                 // Rellenar el formulario con los datos del cliente a modificar
-            document.querySelector("#codigo").value = item.codigo;
+            document.querySelector("#codigo").value = item.id;
             document.querySelector("#nombre").value = item.nombre;
             document.querySelector("#precio").value = item.precio;
             document.querySelector("#stock").value = item.stock;
-            productoID = item.id; // Guardar el ID del cliente para modificarlo más tarde
         });
 
         botones.appendChild(drop);
         botones.appendChild(modi);
 
         // Añade las celdas a la fila
-        tr.appendChild(id);
         tr.appendChild(codigo);
         tr.appendChild(nombre);
         tr.appendChild(precio);
@@ -126,4 +136,27 @@ const renderData = (data) => {
 
         $tableBody.appendChild($fragment);
 };
-    list();
+list();
+
+$modi.addEventListener("click", (event)=>{
+    event.preventDefault();
+    if($cod.value != "" && $name.value != "" && $preci.value != "" && $stock.value != ""){
+        const newdata = {
+            nombre: $name.value,
+            precio: $preci.value,
+            stock: $stock.value
+        }
+        modificar($cod.value, newdata, `productos`);
+        alert("Producto modificado");
+        limpiar();
+        list();
+    }
+    else{
+        alert("Seleccione un producto");
+    }
+});
+
+$clean.addEventListener("click", (event)=>{
+    event.preventDefault();
+    limpiar();
+})
